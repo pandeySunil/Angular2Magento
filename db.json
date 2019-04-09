@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Android AsyncTask Example",
+      "category": "Android"
+    },
+    {
+      "id": 5,
+      "title": "Android AsyncTask Example",
+      "category": "Android"
+    }
+  ],
+
+  "currency": [
+    {
+      "id": 1,
+      "name": "USD",
+      "symbol": "$"
+    },
+    {
+      "id": 1,
+      "name": "BRL",
+      "symbol": "R$"
+    },
+    {
+      "id": 1,
+      "name": "INR",
+      "symbol": "INR"
+    }
+
+  ]
+
+}
