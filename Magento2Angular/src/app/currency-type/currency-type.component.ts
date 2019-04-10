@@ -9,21 +9,31 @@ import { HttpClientModule,HttpClient }    from '@angular/common/http';
 export class CurrencyTypeComponent implements OnInit {
 
 public currency:currency[];
+public selectedCurrancy:string="$";
+
   constructor(private http:HttpClient) { 
   this.http = http;
   }
+ public  selectCurrancy(b:any){
+    
+//this.selectedCurrancy.symbol = b.symbol;
 
+
+  }
   ngOnInit() {
     this.getCurrency();
-    console.dir(this.currency);
+    
+    
   }
  public getCurrency():void{
 
   this.http.get<currency[]>("http://localhost:3000/currency").subscribe((res:currency[])=>{
     res[0].name;
-    console.dir(res);
+    this.currency = res;
+    console.log("Currency");
+    console.dir(this.currency);
   });
-
+  
 }
 
     

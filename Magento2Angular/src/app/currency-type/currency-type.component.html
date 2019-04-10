@@ -1,3 +1,21 @@
-<p>
-  currency-type works!
-</p>
+<span class="crncy-symbol">{{selectedCurrancy}}</span>
+<select id="Id" #Id="ngModel" class="crny-drpdwn" [(ngModel)]="selectedCurrancy" name="Id" (change)="selectCurrancy();">  
+  <option selected="USD" value="USD"></option>
+  <option [ngValue]="a.symbol" *ngFor="let a of currency">  
+  {{a.name}}  
+</option>  
+</select>  
+<style>
+.crny-drpdwn{
+
+margin-top: 20px
+
+}
+
+.crncy-symbol{
+
+margin-right: 5px;
+
+}
+
+</style>

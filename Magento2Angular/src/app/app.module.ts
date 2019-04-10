@@ -9,6 +9,7 @@ import { CurrencyTypeComponent } from './currency-type/currency-type.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { WelcomeMsgComponent } from './welcome-msg/welcome-msg.component';
 import { HttpClientModule,HttpClient }    from '@angular/common/http';
+import{FormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +17,15 @@ import { HttpClientModule,HttpClient }    from '@angular/common/http';
     TopBarComponent,
     CurrencyTypeComponent,
     CreateUserComponent,
-    WelcomeMsgComponent,
+    WelcomeMsgComponent
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
    
     
