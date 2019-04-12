@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{DataService} from '../data.service'
 
 @Component({
   selector: 'app-top-bar',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
+ un:string
+  constructor(s:DataService) { 
 
-  constructor() { }
+    s.u ="dsdffdfdgfg";
+  }
 
   ngOnInit() {
   }

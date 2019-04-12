@@ -1,0 +1,32 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<div class=form-div>
+
+  <div class="form-group">
+    <label for="email">Email</label><span class="star">*</span>
+    <input type="email" [(ngModel)]="email" class="form-control" (change)="validateEmail()" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label><span class="star">*</span>
+    <input type="password" [(ngModel)]="password"  class="form-control" (change)="validatePassword()" id="pwd">
+  </div>
+  
+  <button type="submit" class="btn btn-default" (click)="loginUser()" >Submit</button>
+
+</div>
+
+<h1>{{errorMsg}}</h1>
+
+<h1>{{signInService.userName}}</h1>
+
+<style>
+.form-div{
+margin-left: 20px;
+width:30%;
+
+
+}
+.star{
+  color: red;
+}
+</style>

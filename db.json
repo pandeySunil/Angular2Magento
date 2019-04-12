@@ -29,6 +29,37 @@
       "symbol": "INR"
     }
 
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Sunil Pandey",
+      "email": "pandeysunil211@gmail.com",
+      "password": "apachertr18@",
+      "gender": "M",
+      "mobile": 8879450164,
+      "address": "Vaibhav Appt"
+
+    },
+    {
+      "id": 1,
+      "name": "Neha Pasi",
+      "email": "neha.pasi@perficient.com",
+      "password": "activa12$",
+      "gender": "F",
+      "mobile": 808809090,
+      "address": "Jaripatkha"
+    },
+    {
+      "id": 1,
+      "name": "Ramakant Chandel",
+      "email": "ramakant.chandel.com",
+      "password": "yamahafz15@",
+      "gender": "M",
+      "mobile": 77778890,
+      "address": "Padole Sq"
+    }
+
   ]
 
 }

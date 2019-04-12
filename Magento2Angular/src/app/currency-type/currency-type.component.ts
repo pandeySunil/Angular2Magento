@@ -22,6 +22,7 @@ public selectedCurrancy:string="$";
   }
   ngOnInit() {
     this.getCurrency();
+
     
     
   }
@@ -32,6 +33,7 @@ public selectedCurrancy:string="$";
     this.currency = res;
     console.log("Currency");
     console.dir(this.currency);
+  
   });
   
 }

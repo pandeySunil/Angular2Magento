@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{SignInService} from '../sign-in.service';
+
 
 
 @Component({
@@ -7,13 +9,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome-msg.component.css']
 })
 export class WelcomeMsgComponent implements OnInit {
-  user:string;
-  
-  constructor() { 
-    this.user ="Sunil Pandey"
-  }
+  user:string="";
+  isLoggedIn:boolean;
+  signInService:SignInService;
+  constructor(signInService:SignInService) { 
+    //this.user = signInService.userName;
+    this.signInService = signInService;
+    this.isLoggedIn=signInService.loginStatus;
 
+  }
+public refreshLoggedInUserName(){
+
+
+}
   ngOnInit() {
+
+    this.signInService.change.subscribe(s => {
+
+      this.user = s;
+      
+    });
   }
 
 }
