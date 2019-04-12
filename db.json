@@ -60,6 +60,33 @@
       "address": "Padole Sq"
     }
 
+  ],
+  "Products": [
+    {
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpM7idaADl7ZMnomRDZCi2mrjSThzW41iDq4GMGVgSuGmKviPTqA",
+      "name": "CHECK PRINT SHIRT",
+      "price": 110
+    },
+    {
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4UaanDh1uMoJpbAArwUI_LlgVt7yRt85v7z-is6GaALT2sLSPOg",
+      "name": "GLORIA HIGH LOGO SNEAKER",
+      "price": 91
+    },
+    {
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW5nzyNBPiDv-igvKud6ZwYl6WhbJ9izIL4KrGwADJhSdFghMo",
+      "name": "CATE RIGID BAG",
+      "price": 94.5
+    },
+    {
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pUHlS-zdzVYrkXCioZS1g0s_wzjVRP7KMu7yS7An59_MmoqTsA",
+      "name": "GUESS CONNECT WATCH",
+      "price": 438.9
+    },
+    {
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRyemJ61mHoek8VFevPoK9WeVTLEaM6bpBLWGcjKHJHDxJx6ErhQ",
+      "name": "'70s RETRO GLAM KEFIAH",
+      "price": 20
+    }
   ]
 
 }
