@@ -12,6 +12,6 @@ export class AppComponent {
   router:Router
   constructor(router:Router){
       this.router = router
-   //this.router.navigate(["home"]);
+   this.router.navigate(["home"]);
   }
 }

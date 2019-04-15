@@ -29,7 +29,7 @@ this.http = http;
     alert("");
   }
   public ngForLoaded(a:any){
-    debugger;
+    
 alert();
     console.dir(a);
   }
@@ -39,25 +39,36 @@ alert();
 
     setTimeout(function(){
       jQuery(document).ready(function() {
-   
-        jQuery('.carousel[data-type="multi"] .item').each(function(){
-        var next = jQuery(this).next();
-        if (!next.length) {
-        next = jQuery(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo(jQuery(this));
-        
-        for (var i=0;i<2;i++) {
-        next=next.next();
-        if (!next.length) {
-        next = jQuery(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
-        }
+        $('#bx').bxSlider({
+          auto: true,
+          autoControls: true,
+          speed: 500,
+          slideSelector: 'div.item',
+          minSlides: 3,
+          maxSlides: 3,
+          moveSlides: 1,
+          slideWidth: 500
         });
+        // jQuery('.carousel[data-type="multi"] .item').each(function(){
+        // var next = jQuery(this).next();
+        // if (!next.length) {
+        // next = jQuery(this).siblings(':first');
+        // }
+        // next.children(':first-child').clone().appendTo(jQuery(this));
         
-        });
-
+        // for (var i=0;i<2;i++) {
+        // next=next.next();
+        // if (!next.length) {
+        // next = jQuery(this).siblings(':first');
+        // }
+        // next.children(':first-child').clone().appendTo($(this));
+        // }
+        // });
+        
+        // });
+     
+      });
+        
     },2000);
     
     

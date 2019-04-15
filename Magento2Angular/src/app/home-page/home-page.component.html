@@ -1,4 +1,19 @@
 <app-top-bar></app-top-bar>
-<app-most-viewed-products></app-most-viewed-products>
-<li class=tabs><a  class="router-link" routerLink="#" routerLinkActive="active">SignIn</a></li>
+<div class="search-cart"><span><app-cart class="componet"></app-cart></span><span><app-search class="componet"></app-search></span></div>
+
 <app-menu></app-menu>
+<app-most-viewed-products></app-most-viewed-products>
+
+<style>
+.search-cart{
+float: right;
+
+width:300px;
+margin-bottom: 10px
+}
+.component{
+
+    display:inline-block;
+}
+
+</style>

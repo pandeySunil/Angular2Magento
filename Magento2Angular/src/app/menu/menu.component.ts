@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit {
       console.dir(res);
       console.log("Menu");
       console.dir(this.menu);
-      debugger;
+      
   });
 }
 

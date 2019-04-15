@@ -14,7 +14,9 @@ import{FormsModule} from '@angular/forms';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { MostViewedProductsComponent } from './most-viewed-products/most-viewed-products.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { MenuComponent } from './menu/menu.component'
+import { MenuComponent } from './menu/menu.component';
+import { CartComponent } from './cart/cart.component';
+import { SearchComponent } from './search/search.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { MenuComponent } from './menu/menu.component'
     SignInComponent,
     MostViewedProductsComponent,
     HomePageComponent,
-    MenuComponent
+    MenuComponent,
+    CartComponent,
+    SearchComponent
     
     
   ],
