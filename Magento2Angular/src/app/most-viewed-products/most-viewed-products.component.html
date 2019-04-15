@@ -24,7 +24,7 @@
           }
           </style>
       
-            <div class="container most-viewd-products">
+            <div class="container most-viewd-products" *ngIf="products">
                 
                 <!--The main div for carousel-->
                 <div class="container text-center">
@@ -34,15 +34,15 @@
                         <div class="item active">
                             <div class="col-md-3 col-sm-4 col-xs-12"><a href="#"><img style="height:300px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4UaanDh1uMoJpbAArwUI_LlgVt7yRt85v7z-is6GaALT2sLSPOg" class="img-responsive"></a>
                               <div class="" style="height:100px;display: block">
-                                  <span>Price: </span> <span>$</span> <h6 style="display:inline-block">{{p.price}}</h6>
-                                 <h5>{{p.name}}</h5>
+                                  <span>Price: </span> <span>$</span> <h6 style="display:inline-block">{{products[0].price}}</h6>
+                                 <h5>{{products[0].name}}</h5>
                                </div>
                                  <div class="col-md-3 col-sm-4 col-xs-12" style="height:100px;display: block" >
                                  <button value="Add To Cart" class="btn btn-primary ">Add To Cart</button>
                                  </div>
                             </div>
                         </div>
-                        <div class="item" *ngFor="let p of products" >
+                        <div class="item"  *ngFor="let p of products"(change)="ngForLoaded(label)" >
                             <div class="col-md-3 col-sm-4 col-xs-12"><a href="#"><img style="height:300px" src="{{p.imgUrl}}" class="img-responsive"></a>
                             <div class="" style="height:100px;display: block">
                                <span>Price: </span> <span>$</span> <h6 style="display:inline-block">{{p.price}}</h6>

@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild,Input } from '@angular/core';
 import { HttpClientModule,HttpClient }    from '@angular/common/http';
 import { LoadedRouterConfig } from '@angular/router/src/config';
+declare var jQuery:any;
+declare var $:any;
+
+
 
 @Component({
   selector: 'app-most-viewed-products',
@@ -14,21 +18,65 @@ export class MostViewedProductsComponent implements OnInit {
   public productPrice:string;
   public products:Products[];
   public http:HttpClient;
+  @Input() label: any;
+  
   constructor(http:HttpClient) { 
 this.http = http;
 
   }
+  ngOnChanges(){
+
+    alert("");
+  }
+  public ngForLoaded(a:any){
+    debugger;
+alert();
+    console.dir(a);
+  }
+  //@ViewChild('label')
+
   ngAfterViewInit() {
-    this.loadScript();
+
+    setTimeout(function(){
+      jQuery(document).ready(function() {
+   
+        jQuery('.carousel[data-type="multi"] .item').each(function(){
+        var next = jQuery(this).next();
+        if (!next.length) {
+        next = jQuery(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo(jQuery(this));
+        
+        for (var i=0;i<2;i++) {
+        next=next.next();
+        if (!next.length) {
+        next = jQuery(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+        }
+        });
+        
+        });
+
+    },2000);
+    
+    
+   // this.label.changes.subscribe(()=>this.handleEndOfNgfor());
+
 }
 
   ngOnInit() {
     this.loader =true;
     this.getProducts();
     this.loader =false;
+   
+
     
     
   }
+  private handleEndOfNgfor() {
+alert('hooray!');
+}
   public loadScript() {
     debugger;
     let body = <HTMLDivElement> document.body;
@@ -56,5 +104,15 @@ export  class Products{
   imgUrl:string;
   name:string;
   price:string;
+
+}
+
+export class JQ{
+
+public getJq(){
+
+  
+}
+
 
 }

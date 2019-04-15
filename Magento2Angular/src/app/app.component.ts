@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Magento2Angular';
+  router:Router
+  constructor(router:Router){
+      this.router = router
+   //this.router.navigate(["home"]);
+  }
 }

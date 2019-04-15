@@ -12,7 +12,9 @@ import { WelcomeMsgComponent } from './welcome-msg/welcome-msg.component';
 import { HttpClientModule,HttpClient }    from '@angular/common/http';
 import{FormsModule} from '@angular/forms';
 import { SignInComponent } from './sign-in/sign-in.component';
-import { MostViewedProductsComponent } from './most-viewed-products/most-viewed-products.component'
+import { MostViewedProductsComponent } from './most-viewed-products/most-viewed-products.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { MenuComponent } from './menu/menu.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { MostViewedProductsComponent } from './most-viewed-products/most-viewed-
     CreateUserComponent,
     WelcomeMsgComponent,
     SignInComponent,
-    MostViewedProductsComponent
+    MostViewedProductsComponent,
+    HomePageComponent,
+    MenuComponent
     
     
   ],
@@ -32,7 +36,9 @@ import { MostViewedProductsComponent } from './most-viewed-products/most-viewed-
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: 'signIn', component: SignInComponent }])
+      { path: 'signIn', component: SignInComponent },
+      { path: 'p', component: MostViewedProductsComponent },
+      { path: 'home', component: HomePageComponent }])
 
    
    
