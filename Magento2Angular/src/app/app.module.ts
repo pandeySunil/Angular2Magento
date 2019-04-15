@@ -16,7 +16,8 @@ import { MostViewedProductsComponent } from './most-viewed-products/most-viewed-
 import { HomePageComponent } from './home-page/home-page.component';
 import { MenuComponent } from './menu/menu.component';
 import { CartComponent } from './cart/cart.component';
-import { SearchComponent } from './search/search.component'
+import { SearchComponent } from './search/search.component';
+import { ProductDeatilComponent } from './product-deatil/product-deatil.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { SearchComponent } from './search/search.component'
     HomePageComponent,
     MenuComponent,
     CartComponent,
-    SearchComponent
+    SearchComponent,
+    ProductDeatilComponent
     
     
   ],
