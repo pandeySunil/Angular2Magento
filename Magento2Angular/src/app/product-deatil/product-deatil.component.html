@@ -1,3 +1,76 @@
-<p>
-  product-deatil works!
-</p>
+<app-top-bar></app-top-bar>
+<div class="search-cart"><span><app-cart class="componet"></app-cart></span><span><app-search class="componet"></app-search></span></div>
+<app-logo></app-logo>
+<app-menu></app-menu>
+
+<div class="product-wrapper" *ngIf="productDetail">
+<div class="product-image">
+    <img  src="{{productDetail.imgUrl}}" class="img-responsive" style="margin:0 auto;width:100%">
+</div>
+<div class="product-detail">
+  <h2 class="product-title">{{productDetail.name}}</h2>
+  <h6 class="description">{{productDetail.description}}</h6>
+  <h5 class="stock">Stock:</h5><span>{{productDetail.qty}}</span>
+  <span><h5 class="sku">SKU#:</h5></span><span>{{productDetail.sku}}</span>
+  <input type="text" readonly class="qty" style="height:20px;width:20px">
+</div>
+
+</div>
+
+<style>
+  .product-wrapper{
+height: 600px;
+
+  }
+  h2.product-title {
+    font-family: cursive;
+    margin-left: 25px;
+}
+  .product-image{
+    height: 590px;
+   
+    float: left;
+    width:60%
+
+  }
+  .product-detail{
+    height: 590px;
+    
+float:left;
+    width:35%;
+    
+  }
+  .search-cart{
+  float: right;
+  
+  width:300px;
+  margin-bottom: 10px
+  }
+  .component{
+  
+      display:inline-block;
+  }
+  
+  h6.description {
+    font-size: 20px;
+    margin-left: 25px;
+    width: 80%;
+    font-family: monospace;
+}
+
+h5.stock {
+    float: left;
+    /* clear: both; */
+    font-size: 15px;
+    font-family: monospace;
+    margin-left: 25px;
+}
+
+
+h5.sku {
+    clear: both;
+    margin-left: 25px;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+  </style>

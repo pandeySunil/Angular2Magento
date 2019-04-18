@@ -62,27 +62,27 @@
 
   ],
   "Products": [
-    {
+    { "id": 1,
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpM7idaADl7ZMnomRDZCi2mrjSThzW41iDq4GMGVgSuGmKviPTqA",
       "name": "CHECK PRINT SHIRT",
       "price": 110
     },
-    {
+    { "id": 2,
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4UaanDh1uMoJpbAArwUI_LlgVt7yRt85v7z-is6GaALT2sLSPOg",
       "name": "GLORIA HIGH LOGO SNEAKER",
       "price": 91
     },
-    {
+    {   "id": 3,
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW5nzyNBPiDv-igvKud6ZwYl6WhbJ9izIL4KrGwADJhSdFghMo",
       "name": "CATE RIGID BAG",
       "price": 94.5
     },
-    {
+    {  "id": 4,
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pUHlS-zdzVYrkXCioZS1g0s_wzjVRP7KMu7yS7An59_MmoqTsA",
       "name": "GUESS CONNECT WATCH",
       "price": 438.9
     },
-    {
+    { "id": 5,
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRyemJ61mHoek8VFevPoK9WeVTLEaM6bpBLWGcjKHJHDxJx6ErhQ",
       "name": "'70s RETRO GLAM KEFIAH",
       "price": 20
@@ -138,6 +138,52 @@
       "name": "Sale"
     }
 
-  ]
+  ],
+  "productDetails": [
+    {
+      "id":1,
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pUHlS-zdzVYrkXCioZS1g0s_wzjVRP7KMu7yS7An59_MmoqTsA",
+      "name": "GUESS CONNECT WATCH",
+      "price": 438.9,
+      "qty": 10,
+      "reviews": 3,
+      "sku": "wtc12",
+      "description": "Very Good Shirt You will Look very Fine In This"
 
+    },
+    {
+      "id": 2,
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4UaanDh1uMoJpbAArwUI_LlgVt7yRt85v7z-is6GaALT2sLSPOg",
+      "name": "GUESS CONNECT WATCH",
+      "price": 438.9,
+      "qty": 10,
+      "reviews": 3,
+      "sku": "wtc12",
+      "description": "Very Good Shirt You will Look very Fine In This"
+
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW5nzyNBPiDv-igvKud6ZwYl6WhbJ9izIL4KrGwADJhSdFghMo",
+      "name": "GLORIA HIGH LOGO SNEAKER",
+      "price": 91,
+      "qty": 10,
+      "reviews": 3,
+      "sku": "snk12",
+      "description": "Very Good OutFit"
+
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pUHlS-zdzVYrkXCioZS1g0s_wzjVRP7KMu7yS7An59_MmoqTsA",
+      "name": "GUESS CONNECT WATCH",
+      "price": 438.9,
+      "qty": 10,
+      "reviews": 3,
+      "sku": "wtc12",
+      "description": "Very Good Shirt You will Look very Fine In This"
+
+    }
+
+  ]
 }

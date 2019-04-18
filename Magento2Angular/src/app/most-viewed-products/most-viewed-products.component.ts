@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild,Input } from '@angular/core';
 import { HttpClientModule,HttpClient }    from '@angular/common/http';
 import { LoadedRouterConfig } from '@angular/router/src/config';
+import {Router} from "@angular/router";
 declare var jQuery:any;
 declare var $:any;
 
@@ -18,10 +19,12 @@ export class MostViewedProductsComponent implements OnInit {
   public productPrice:string;
   public products:Products[];
   public http:HttpClient;
+  public route:Router;
   @Input() label: any;
   
-  constructor(http:HttpClient) { 
+  constructor(http:HttpClient,r:Router) { 
 this.http = http;
+this.route = r;
 
   }
   ngOnChanges(){
@@ -34,20 +37,26 @@ alert();
     console.dir(a);
   }
   //@ViewChild('label')
+  public navigateProductDetail(id:number){
 
+    this.route.navigate(["productdetail/"+id]);
+  }
   ngAfterViewInit() {
 
     setTimeout(function(){
       jQuery(document).ready(function() {
         $('#bx').bxSlider({
           auto: true,
-          autoControls: true,
+          autoControls: false,
           speed: 500,
           slideSelector: 'div.item',
           minSlides: 3,
           maxSlides: 3,
           moveSlides: 1,
-          slideWidth: 500
+          pager:false,
+          slideWidth: 500,
+          controls:false,
+          
         });
         // jQuery('.carousel[data-type="multi"] .item').each(function(){
         // var next = jQuery(this).next();

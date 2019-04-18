@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{SignInService} from '../sign-in.service'
 import { HttpClientModule,HttpClient }    from '@angular/common/http';
+import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
 
 @Component({
   selector: 'app-sign-in',
@@ -8,7 +9,7 @@ import { HttpClientModule,HttpClient }    from '@angular/common/http';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
-
+  public local: LocalStorageService
   public email:string;
   public password:string;
   public errorMsg:string;
@@ -18,10 +19,11 @@ export class SignInComponent implements OnInit {
   public http:HttpClient;
   public signInService:SignInService
 
-  constructor(s:SignInService,http:HttpClient) { 
+  constructor(s:SignInService,http:HttpClient,local: LocalStorageService) { 
 this.http = http;
 this.signInService =s;
 this.getUsers();
+this.local = local;
 
 
 
@@ -48,6 +50,8 @@ public loginUser(){
   this.signInService.userName = this.loggedInUser.name;
   //this.signInService.setloggedInUserName(this.loggedInUser.name);
   this.signInService.getloggedInUserName(this.loggedInUser.name);
+  debugger;
+  this.local.set("loggedInUser", { name: this.loggedInUser.name }, 3600, 's');
 }
 
 public validateEmail(){

@@ -18,6 +18,8 @@ import { MenuComponent } from './menu/menu.component';
 import { CartComponent } from './cart/cart.component';
 import { SearchComponent } from './search/search.component';
 import { ProductDeatilComponent } from './product-deatil/product-deatil.component'
+import { AngularWebStorageModule } from 'angular-web-storage';
+import { LogoComponent } from './logo/logo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,20 +34,24 @@ import { ProductDeatilComponent } from './product-deatil/product-deatil.componen
     MenuComponent,
     CartComponent,
     SearchComponent,
-    ProductDeatilComponent
+    ProductDeatilComponent,
+    LogoComponent
     
     
   ],
   imports: [
     BrowserModule,
+    AngularWebStorageModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
       { path: 'signIn', component: SignInComponent },
       { path: 'p', component: MostViewedProductsComponent },
-      { path: 'home', component: HomePageComponent }])
+      { path: 'home', component: HomePageComponent },
+      { path: 'productdetail/:id', component:ProductDeatilComponent}])
 
+      
    
    
     
