@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule,HttpClient }    from '@angular/common/http';
 import {ActivatedRoute} from "@angular/router";
+import{CartserviceService} from '../cartservice.service'
+import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
 
 @Component({
   selector: 'app-product-deatil',
@@ -10,19 +12,38 @@ import {ActivatedRoute} from "@angular/router";
 export class ProductDeatilComponent implements OnInit {
 
 
-public productDetail:productDetail;
-public http:HttpClient;
-public activeRoute:ActivatedRoute;
-public productId:string;
-  constructor(h:HttpClient,a:ActivatedRoute) { 
+    public productDetail:productDetail;
+    public http:HttpClient;
+    public productQty:number=0;
+    public activeRoute:ActivatedRoute;
+    public productId:string;
+    public cartservice:CartserviceService
+    public local:SessionStorageService;
+  constructor(h:HttpClient,a:ActivatedRoute,c:CartserviceService,s:SessionStorageService) { 
     this.http = h;
     this.activeRoute = a;
+    this.cartservice = c;
+    this.local = s;
     this.activeRoute.params.subscribe( params => this.productId =params.id);
+    
     this.getProductDetail();
   }
 
   ngOnInit() {
     
+  }
+  public AddToCart(){
+    debugger;
+    this.cartservice.createCart(1,this.productDetail.id,this.productQty);
+  
+  }
+  public IncreaseProductQty(){
+
+    this.productQty = this.productQty+1;
+  }
+  public DecreaseProductQty(){
+if(!this.productQty)
+    this.productQty = this.productQty-1;
   }
 public getProductDetail(){
 
