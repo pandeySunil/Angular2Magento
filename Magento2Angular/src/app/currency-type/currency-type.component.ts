@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule,HttpClient }    from '@angular/common/http';
+import{baseUrl} from '../Helpers/BaseUrlHelper'
 
 @Component({
   selector: 'app-currency-type',
@@ -10,6 +11,7 @@ export class CurrencyTypeComponent implements OnInit {
 
 public currency:currency[];
 public selectedCurrancy:string="$";
+public uri:string = baseUrl+"currency";
 
   constructor(private http:HttpClient) { 
   this.http = http;
@@ -27,8 +29,8 @@ public selectedCurrancy:string="$";
     
   }
  public getCurrency():void{
-
-  this.http.get<currency[]>("http://localhost:3000/currency").subscribe((res:currency[])=>{
+console.log("Url  "+this.uri);
+  this.http.get<currency[]>(this.uri).subscribe((res:currency[])=>{
     res[0].name;
     this.currency = res;
     console.log("Currency");

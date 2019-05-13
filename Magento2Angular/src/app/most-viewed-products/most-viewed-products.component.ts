@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild,Input } from '@angular/core';
 import { HttpClientModule,HttpClient }    from '@angular/common/http';
 import { LoadedRouterConfig } from '@angular/router/src/config';
+import{baseUrl} from '../Helpers/BaseUrlHelper'
 import {Router} from "@angular/router";
 declare var jQuery:any;
 declare var $:any;
@@ -20,6 +21,7 @@ export class MostViewedProductsComponent implements OnInit {
   public products:Products[];
   public http:HttpClient;
   public route:Router;
+  public Uri:string = baseUrl+"Products";
   @Input() label: any;
   
   constructor(http:HttpClient,r:Router) { 
@@ -109,7 +111,7 @@ alert('hooray!');
 }
 
 private getProducts(){
-  this.http.get<Products[]>("http://localhost:3000/Products").subscribe((res:Products[])=>{
+  this.http.get<Products[]>(this.Uri).subscribe((res:Products[])=>{
 
     this.products = res;
     console.dir(res);
